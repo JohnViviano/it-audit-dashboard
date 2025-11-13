@@ -35,7 +35,7 @@
               edit_audit_finding_path(@audit, @finding),
               class: "btn btn-primary" %>
 
-  <%= link_to "Back to findings",
+  <%= link_to "Back to findings for " + @audit.title,
               audit_findings_path(@audit),
               class: "btn btn-secondary" %>
 
