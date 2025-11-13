@@ -1,0 +1,13 @@
+<h1>Edit Finding</h1>
+
+<%= render "form", finding: @finding %>
+
+<div class="mt-3">
+  <%= link_to "Show this finding",
+              audit_finding_path(@audit, @finding),
+              class: "btn btn-primary" %>
+
+  <%= link_to "Back to findings",
+              audit_findings_path(@audit),
+              class: "btn btn-secondary" %>
+</div>

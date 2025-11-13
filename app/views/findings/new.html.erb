@@ -1,0 +1,5 @@
+<h1>New Finding for <%= @audit.title %></h1>
+
+<%= render "form", finding: @finding %>
+
+<%= link_to "Back to Findings for " + @audit.title, audit_path(@audit), class: "btn btn-secondary mt-3" %>

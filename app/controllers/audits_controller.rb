@@ -3,7 +3,8 @@ class AuditsController < ApplicationController
 
   # GET /audits or /audits.json
   def index
-    @audits = Audit.all
+    #@audits = Audit.all
+    @audits = current_user.audits
   end
 
   # GET /audits/1 or /audits/1.json
@@ -22,6 +23,7 @@ class AuditsController < ApplicationController
   # POST /audits or /audits.json
   def create
     @audit = Audit.new(audit_params)
+    @audit.creator = current_user
 
     respond_to do |format|
       if @audit.save
